@@ -56,6 +56,24 @@ elif [ $TYPE = "paid" ]; then
 		usage
 		exit 1
 	fi
+elif [ $TYPE = "free_cv" ]; then
+	if [ $MODE = "develop" ]; then
+		BASE_URL="http://on0jjpqsb.bkt.clouddn.com"
+	elif [ $MODE = "product" ]; then
+		BASE_URL="https://cv-free.boxueio.com"
+	else
+		usage
+		exit 1
+	fi
+elif [ $TYPE = "paid_cv" ]; then
+	if [ $MODE = "develop" ]; then
+		BASE_URL="http://on0j9cw4a.bkt.clouddn.com"
+	elif [ $MODE = "product" ]; then
+		BASE_URL="https://cv-paid.boxueio.com"
+	else
+		usage
+		exit 1
+	fi
 else
 	usage
 	exit 1
